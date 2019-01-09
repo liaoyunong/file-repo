@@ -86,7 +86,7 @@ Person.prototype.constructor === Person; // true
 原型链：p --> Person.prototype --> Object.prototype --> null
 
 描述：
-1. 由于构造函数的原型也是对象，因此：它也有原型对象，指向Object.__proto__
+1. 由于构造函数的原型也是对象，因此：它也有原型对象，指向Object.prototype
 2. 由于构造函数的原型的原型也是对象，因此：它也有原型对象，指向null（特例）
 
 验证：
