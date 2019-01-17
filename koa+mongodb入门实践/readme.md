@@ -340,7 +340,7 @@ primary key | primary key |	主键,MongoDB自动将_id字段设置为主键
 
 MySQL和MongoDB都有丰富的查询语言。具体的查询语言比对可以查看 [MongoDB文档](https://docs.mongodb.com/manual/reference/sql-comparison/?_ga=2.97293983.1414641971.1500188964-1583439788.1500188964)
 
-![image](https://user-gold-cdn.xitu.io/2017/11/25/15ff090eec3720dc?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+![image](image/6.png)
 
 ###### 4.5 Mongoose
 
