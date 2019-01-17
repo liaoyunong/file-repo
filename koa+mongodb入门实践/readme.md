@@ -1,4 +1,4 @@
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/koa.png)
+![image](image/koa.png)
 
 ##### 一、Koa是什么
 
@@ -64,7 +64,7 @@ npm run start
 
 然后浏览器访问[http://localhost:3000/](http://localhost:3000/)，可以看到页面显示“Not Found”，这是因为我们并没有给koa指定输出什么内容。就是这么简单的几行代码，我们就起了一个HTTP服务。
 
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/1.png)
+![image](image/1.png)
 
 ###### 3.2 必修的hello world
 
@@ -81,7 +81,7 @@ app.listen(3000)
 ```
 再次访问[http://localhost:3000/](http://localhost:3000/)，就可以看到亲切的hello world了，
 
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/2.png)
+![image](image/2.png)
 
 这个hello world程序，其中前两行和后一行是架设一个 HTTP 服务，中间的则是对用户访问的处理。ctx则是Koa所提供的Context对象(上下文)，ctx.body=ctx.response.body，是ctx.response.body的alias(别名)。
 
@@ -155,7 +155,7 @@ babel-node demo/3.js
 << 1
 ```
 
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/3.png)
+![image](image/3.png)
 
 此外，如果一个middleware没有调用await next()，会怎么办？答案是后续的middleware将不再执行了。仍然是上面那个例子，将第一个中间件的next函数注释掉
 
@@ -191,7 +191,7 @@ app.listen(3000)
 >> 1
 << 1
 ```
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/4.png)
+![image](image/4.png)
 
 可见Koa在执行完第一个中间件后，由于没有接收到next函数的调用来传递控制权，后续的中间件将不再执行了。这种情况也很常见，例如，一个检测用户权限的中间件可以决定是否继续处理请求，还是直接返回403错误：
 
@@ -238,7 +238,7 @@ app.use(async ctx => {
 
 ##### 四、MongoDB
 
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/mongodb.png)
+![image](image/mongodb.png)
 
 ###### 4.1 MongoDB简介
 
@@ -320,7 +320,7 @@ primary key | primary key |	主键,MongoDB自动将_id字段设置为主键
 
 下图可以更直观的理解：
 
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/compare.png)
+![image](image/compare.png)
 
 2.特色对比
 
@@ -381,7 +381,7 @@ babel-node demo/7.js
 ```
 可以在命令行窗口看到Connecting database successfully，表示数据库连接成功。
 
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/7.png)
+![image](image/7.png)
 
 Mongooose中，有三个比较重要的概念，分别是Schema、Model、Entity。
 
@@ -490,10 +490,10 @@ babel-node demo/8.js
 ```
 命令行窗口会输出
 
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/8.png)
+![image](image/8.png)
 
 然后再查看一下数据库，看数据是否保存了，这里我使用  [Robo 3T](https://robomongo.org/)可视化工具来管理数据库
 
-![image](http://172.16.117.224/fe/ND-Share/raw/master/koa+mongodb%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/image/user.png)
+![image](image/user.png)
 
 可以看出test数据库下新增了一个名叫users的Collection，里面新增了一份文档，具体内容就是刚刚实例化并保存的user数据。
