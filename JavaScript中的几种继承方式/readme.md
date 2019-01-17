@@ -28,7 +28,7 @@ console.log(instance.getSuperValue())//true
 
 输出instance看下：
 
-![image](https://note.youdao.com/favicon.ico)
+![image](image/1.png)
 
 原型链：instance --> SubType.prototype --> SuperType.prototype
 
@@ -126,7 +126,7 @@ instance2.sayName(); //"Greg";
 instance2.sayAge(); //27
 ```
 
-![image](https://note.youdao.com/favicon.ico)
+![image](image/2.png)
 
 缺陷：父类中的实例属性和方法既存在于子类的实例中，又存在于子类的原型中，不过仅是内存占用，因此，在使用子类创建实例对象时，其原型中会存在两份相同的属性/方法
 
@@ -175,7 +175,7 @@ instance2.sayName(); //"Greg";
 instance2.sayAge(); //27
 ```
 
-![image](https://note.youdao.com/favicon.ico)
+![image](image/3.png)
 
 很明显，SubType的原型属性相较之前清爽不少
 
@@ -208,7 +208,7 @@ anotherPerson2.friends.push("Barbie");
 console.log(person.friends);//["Shelby", "Court", "Van", "Rob", "Barbie"]
 ```
 
-![image](https://note.youdao.com/favicon.ico)
+![image](image/4.png)
 
 缺点：
 1. 原型链继承多个实例的引用类型属性指向相同，存在篡改的可能
@@ -286,6 +286,6 @@ instance1.colors.push("2");
 instance2.colors.push("3");
 ```
 
-![image](https://note.youdao.com/favicon.ico)
+![image](image/5.png)
 
 寄生组合继承集合了前面几种继承优点，几乎避免了上面继承方式的所有缺陷，是执行效率最高也是应用面最广的，就是实现的过程相对繁琐
