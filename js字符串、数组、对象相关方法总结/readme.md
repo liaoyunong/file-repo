@@ -1,6 +1,6 @@
 ### 案例分析
 树形结构，选中后只保留最后一级信息，那么如何优雅的用代码实现呢？
-![image](http://172.16.117.224/fe/ND-Share/raw/master/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E6%95%B0%E7%BB%84%E3%80%81%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/image-1.png)
+![image](image/1.png)
 
 ```
 onCheck = (checkedKeys, e) => {
